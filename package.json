@@ -16,6 +16,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@fontsource-variable/kufam": "^5.0.9",
+    "@fontsource-variable/nunito": "^5.0.9",
     "@mdx-js/react": "^2.3.0",
     "autoprefixer": "^10.4.14",
     "gatsby": "^5.11.0",

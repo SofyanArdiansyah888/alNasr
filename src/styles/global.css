@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*TYPOGRAPHY*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: "kufam", 'sans-serif';
+}
+
+h1{
+    @apply text-[52px]
+}
+
+h4{
+    @apply text-[32px]
+}
+
+h5{
+    @apply text-[24px]
+}
+
+h6{
+    @apply text-[16px]
+}
+
+p, li, button {
+    font-family: 'Nunito', sans-serif;
+}
+
+/*SHADOW*/
+.custom-shadow{
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
+}
