@@ -14,13 +14,13 @@ const SectionDream = () => {
         </div>
         {/*RIGHT*/}
         <div className={"space-y-6 w-full"}>
-          <h1 className={"max-w-xl font-bold text-lightBlack"}>A Wonderful Agency To Fulfill your Dreams</h1>
-          <p className={"font-semibold text-lightBlack max-w-md"}>
+          <h1 className={"max-w-2xl font-bold text-lightBlack"}>A Wonderful Agency To Fulfill your Dreams</h1>
+          <p className={"text-2xl text-lightBlack max-w-2xl"}>
             The Hajj and Umrah pilgrimages are smooth, the heart is clean. we
             have been trusted since 2006 and have obtained a license from SAUDI
             ARABIA to become this travel agency.
           </p>
-          <ul className={"space-y-2"}>
+          <ul className={"space-y-4 text-[22px] text-lightBlack"}>
             <li>
               Flight Jakarta Saudi - Saudi Jakarta
             </li>
