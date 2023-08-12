@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1{
-    @apply text-[52px]
+    @apply text-[48px] leading-tight
 }
 
 h4{
@@ -30,4 +30,11 @@ p, li, button {
 /*SHADOW*/
 .custom-shadow{
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
+}
+.btn-blue{
+    @apply px-3 py-1 text-secondary bg-lightSecondary rounded-full max-w-fit
+}
+
+.btn-orange{
+    @apply py-4 px-8 text-lightBlack rounded-md bg-primary font-semibold
 }

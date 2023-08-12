@@ -6,6 +6,19 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage:{
+        'gradient-yellow' : 'linear-gradient(180deg, rgba(255, 206, 131, 0.00) 0%, rgba(255, 194, 101, 0.05) 100%);'
+      },
+      container:{
+        center:true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          lg: '4rem',
+          xl: '5rem',
+          '2xl': '6rem',
+        }
+      },
       colors:{
         primary: "rgba(255, 194, 101, 1)",
         lightPrimary:"rgba(255, 255, 255, 1)",
