@@ -9,7 +9,7 @@ const SectionHero = () => {
         <div>
           <button className={"btn-blue my-8"}>No.1 in Indonesia</button>
           <div className={"space-y-6"}>
-            <h1 className={"max-w-md font-bold text-lightBlack"}>
+            <h1 className={"max-w-md font-extrabold text-lightBlack"}>
               Make it easy for your Umrah worship with Al Nasr Travel
             </h1>
             <p className={"font-semibold text-lightBlack max-w-md"}>

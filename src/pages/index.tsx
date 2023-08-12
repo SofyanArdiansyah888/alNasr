@@ -1,13 +1,15 @@
 import React from "react";
 import SectionHero from "../components/sections/SectionHero";
+import SectionDream from "../components/sections/SectionDream";
 
 const IndexPage = () => {
-
-    return <>
-       <SectionHero />
-
+  return (
+    <>
+      <SectionHero />
+      <SectionDream />
     </>
-}
+  );
+};
 
 // export const query = graphql`
 //   query {
@@ -20,6 +22,5 @@ const IndexPage = () => {
 //     }
 //   }
 // `
-
 
 export default IndexPage;

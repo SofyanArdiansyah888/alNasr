@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1{
-    @apply text-[48px] leading-tight
+    @apply text-[52px] leading-tight
 }
 
 h4{
@@ -36,5 +36,8 @@ p, li, button {
 }
 
 .btn-orange{
-    @apply py-4 px-8 text-lightBlack rounded-md bg-primary font-semibold
+    @apply py-4 px-8 text-lightBlack rounded-md bg-primary font-[550]
+}
+.btn-orange-outline{
+    @apply py-4 px-8 rounded-md border-2 border-primary font-[550]
 }

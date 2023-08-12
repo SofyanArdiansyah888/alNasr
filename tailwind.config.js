@@ -23,7 +23,7 @@ module.exports = {
         primary: "rgba(255, 194, 101, 1)",
         lightPrimary:"rgba(255, 255, 255, 1)",
         secondary: "rgba(29, 165, 153, 1)",
-        lightSecondary:"rgba(193, 255, 250, 1)",
+        lightSecondary:"#F3FFFE",
         lightBlack: 'rgba(74, 74, 74, 1)'
       }
     },
