@@ -1,12 +1,14 @@
 import React from "react";
 import SectionHero from "../components/sections/SectionHero";
 import SectionDream from "../components/sections/SectionDream";
+import SectionPackage from "../components/sections/SectionPackage";
 
 const IndexPage = () => {
   return (
     <>
       <SectionHero />
       <SectionDream />
+      <SectionPackage />
     </>
   );
 };

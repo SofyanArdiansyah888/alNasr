@@ -24,6 +24,7 @@ module.exports = {
         lightPrimary:"rgba(255, 255, 255, 1)",
         secondary: "rgba(29, 165, 153, 1)",
         lightSecondary:"#F3FFFE",
+        lightBlue:"#C1FFFA",
         lightBlack: 'rgba(74, 74, 74, 1)'
       }
     },
