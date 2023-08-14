@@ -1,11 +1,12 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import {FlightIcon} from "./icons";
 
 const PackageCard = () => {
   return (
     <div className={"custom-shadow pt-6 pl-6 rounded-md"}>
       <StaticImage
-        src={"../assets/images/image8.png"}
+        src={"../images/image8.png"}
         className={" rounded-lg mr-6"}
         alt={"Image 1"}
       />
@@ -23,7 +24,7 @@ const PackageCard = () => {
         $ 1,950/ <span className={"text-secondary"}>person</span>
       </p>
       <div className={"flex gap-4 my-6"}>
-        <StaticImage src={"../assets/icons/flight.svg"} alt={""} />
+        <FlightIcon />
         <StaticImage src={"../assets/icons/flight.svg"} alt={""} />
         <StaticImage src={"../assets/icons/flight.svg"} alt={""} />
         <StaticImage src={"../assets/icons/flight.svg"} alt={""} />
