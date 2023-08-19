@@ -3,28 +3,12 @@
 @tailwind utilities;
 
 /*TYPOGRAPHY*/
-h1, h2, h3, h4, h5, h6 {
+h1,h2, h3, h4, h5, h6 {
     font-family: "Kufam Variable", 'sans-serif';
 }
 
-h1{
-    @apply text-[52px] leading-tight
-}
-
-h4{
-    @apply text-[32px]
-}
-
-h5{
-    @apply text-[24px]
-}
-
-h6{
-    @apply text-[20px]
-}
-
 p, li, button {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito Variable', sans-serif;
 }
 
 /*SHADOW*/
