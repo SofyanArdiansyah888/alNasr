@@ -6,6 +6,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+
       backgroundImage:{
         'gradient-yellow' : 'linear-gradient(180deg, rgba(255, 206, 131, 0.00) 0%, rgba(255, 194, 101, 0.05) 100%);'
       },

@@ -1,43 +1,84 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import {FlightIcon} from "./icons";
+import {
+  GatsbyImage,
+  IGatsbyImageData,
+  StaticImage,
+} from "gatsby-plugin-image";
+import { FlightIcon } from "./icons";
+import { EatIcon, HostelIcon, TicketIcon, VisaIcon } from "components/icons";
+import Typography from "components/ui/Typography";
 
-const PackageCard = () => {
-  return (
-    <div className={"custom-shadow pt-6 pl-6 rounded-md"}>
-      <StaticImage
-        src={"../images/image8.png"}
-        className={" rounded-lg mr-6"}
-        alt={"Image 1"}
-      />
+type PackageCardType = {
+  name: string | null;
+  description: string | null;
+  promo: string | null;
+  per: string | null;
+  image: any | null;
+  features: readonly (string | null)[] | null;
+  detailText?: string | null;
+};
 
-      {/*BEST SELLER*/}
-      <div className={"flex justify-between items-center my-4 text-md"}>
-        <div className={"text-primary"}>Bronze</div>
-        <div className={"bg-lightBlue text-secondary rounded-l-full px-6 py-2 rounded-r-none "}>Best Seller</div>
+const PackageCard = ({
+  image,
+  name,
+  description,
+  promo,
+  per,
+  features,
+  detailText,
+}: PackageCardType) => {
+  if (name !== "Soon Program")
+    return (
+      <div className={"custom-shadow pt-6 pl-6 rounded-md"}>
+        {image?.childImageSharp && (
+          <GatsbyImage
+            image={image?.childImageSharp.gatsbyImageData}
+            className={" rounded-lg mr-6"}
+            alt={"Image 1"}
+          />
+        )}
+
+        {/*BEST SELLER*/}
+        <div className={"flex justify-between items-center my-4 text-md"}>
+          <div className={"text-primary"}>{name}</div>
+          <div
+            className={
+              "bg-lightBlue text-secondary rounded-l-full px-6 py-2 rounded-r-none "
+            }
+          >
+            {promo}
+          </div>
+        </div>
+
+        <p className={"text-lg max-w-[250px]  font-semibold text-lightBlack"}>
+          {description}
+          <span className={"text-secondary"}> {per}</span>
+        </p>
+
+        <div className={"flex gap-4 my-6"}>
+          {features?.map((item) => (
+            <>
+              {item === "flight" && <FlightIcon />}
+              {item === "ticket" && <TicketIcon />}
+              {item === "hostel" && <HostelIcon />}
+              {item === "visa" && <VisaIcon />}
+              {item === "eat" && <EatIcon />}
+            </>
+          ))}
+        </div>
+        <button
+          className={
+            "border-2 border-primary py-3 px-8 rounded-md text-primary text-xs mb-6"
+          }
+        >
+          {detailText}
+        </button>
       </div>
+    );
 
-      <p className={"text-lg font-semibold text-lightBlack"}>
-        Al Nasr Special Umrah 9 Days
-      </p>
-      <p className={"text-lg font-semibold text-lightBlack"}>
-        $ 1,950/ <span className={"text-secondary"}>person</span>
-      </p>
-      <div className={"flex gap-4 my-6"}>
-        <FlightIcon />
-        <StaticImage src={"../assets/icons/flight.svg"} alt={""} />
-        <StaticImage src={"../assets/icons/flight.svg"} alt={""} />
-        <StaticImage src={"../assets/icons/flight.svg"} alt={""} />
-      </div>
-      <button
-        className={
-          "border-2 border-primary py-3 px-8 rounded-md text-primary text-xs mb-6"
-        }
-      >
-        View Detail
-      </button>
-    </div>
-  );
+  return <div className={"custom-shadow rounded-md flex items-center justify-center"}>
+      <Typography variant={"s24"} color={"secondary"}>{name}</Typography>
+  </div>
 };
 
 export default PackageCard;

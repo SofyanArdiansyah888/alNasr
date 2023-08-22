@@ -22,6 +22,7 @@ const config: GatsbyConfig = {
         },
       },
     },
+    "gatsby-transformer-remark",
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
@@ -41,6 +42,14 @@ const config: GatsbyConfig = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "content",
+        path: "./src/content/",
+      },
+      __key: "content",
     },
 
     {
