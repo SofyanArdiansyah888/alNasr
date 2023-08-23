@@ -4,7 +4,7 @@ subtitle: "The Hajj and Umrah pilgrimages are smooth, the heart is clean. we hav
 features: [
   {
     title: "Flight Jakarta Saudi - Saudi Jakarta",
-    icon: "plane",
+    icon: "flight",
   },
   {
     title: "Tickets are included in the cost",

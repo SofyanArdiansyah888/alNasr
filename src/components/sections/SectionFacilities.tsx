@@ -1,30 +1,54 @@
 import React from "react";
 import FacilitiesCard from "../FacilitiesCard";
+import { graphql, useStaticQuery } from "gatsby";
+import Typography from "components/ui/Typography";
+
+const query = graphql`
+  query Facility {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/facility/" } }) {
+      nodes {
+        frontmatter {
+          subtitle
+          title
+          facilities {
+            title
+            subtitle
+            icon
+          }
+        }
+      }
+    }
+  }
+`;
 
 const SectionFacilities = () => {
+  const queryData = useStaticQuery<Queries.FacilityQuery>(query);
+  const data = queryData.allMarkdownRemark.nodes[0].frontmatter;
   return (
-    <section className={"container py-24 bg-lightSecondary"}>
-      <h1 className={"max-w-4xl text-center mx-auto font-bold text-lightBlack"}>
-        Facilities We Provide For You
-      </h1>
-      <p
-        className={
-          "text-center text-xl mt-4 max-w-[32rem] mx-auto text-[#454545]"
-        }
-      >
-        We provide comfort for our customers, with the various facilities we
-        provide that we provide
-      </p>
+    <section className={"bg-lightSecondary"}>
+      <div className={"container py-24 "}>
+        <Typography
+          as={"h1"}
+          variant={"s54"}
+          color={"light-dark"}
+          className={"mx-auto text-center mb-4"}
+        >
+          {data?.title}
+        </Typography>
+        <Typography
+          as={"p"}
+          variant={"s24"}
+          className={"text-center max-w-xl mx-auto"}
+          color={"light-dark"}
+        >
+          {data?.subtitle}
+        </Typography>
         <div className={"grid grid-cols-1 lg:grid-cols-4 gap-8 mt-20 "}>
-            <FacilitiesCard />
-            <FacilitiesCard />
-            <FacilitiesCard />
-            <FacilitiesCard />
-            <FacilitiesCard />
-            <FacilitiesCard />
-            <FacilitiesCard />
-            <FacilitiesCard />
+          {data?.facilities?.map((props, index) => (
+            <FacilitiesCard {...props} key={index} />
+          ))}
         </div>
+      </div>
     </section>
   );
 };

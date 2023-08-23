@@ -1,14 +1,44 @@
 import React from "react";
+import {
+  ConselingIcon,
+  EatIcon,
+  HealthIcon,
+  HostelIcon,
+  MembershipIcon,
+  SafetyIcon,
+  VaccineIcon,
+  VehicleIcon,
+} from "components/icons";
+import Typography from "components/ui/Typography";
 
-const FacilitiesCard = () => {
+const FacilitiesCard = ({
+  title,
+  subtitle,
+  icon,
+}: {
+  title?: string | null;
+  subtitle?: string | null;
+  icon?: string | null;
+}) => {
   return (
-    <div className={"custom-shadow rounded-md p-4 flex gap-4 bg-white"}>
-      <div className={"w-20"}></div>
+    <div className={"custom-shadow rounded-md p-4 flex gap-2 bg-white"}>
+      <div className={"w-16"}>
+        {icon === "safety" && <SafetyIcon />}
+        {icon === "conseling" && <ConselingIcon />}
+        {icon === "vehicle" && <VehicleIcon />}
+        {icon === "health" && <HealthIcon />}
+        {icon === "hostel" && <HostelIcon />}
+        {icon === "food" && <EatIcon />}
+        {icon === "membership" && <MembershipIcon />}
+        {icon === "vaccine" && <VaccineIcon />}
+      </div>
       <div className={"space-y-1"}>
-        <h6 className={"text-lightBlack font-semibold"}>Safety & Security</h6>
-        <p className={"text-[15px] text-lightBlack "}>
-          We take care of your security in 24 hours
-        </p>
+        <Typography as={"h6"} variant={"s20"} color={"light-dark"}>
+          {title}
+        </Typography>
+        <Typography as={"p"} variant={"s14"} color={"light-dark"}>
+          {subtitle}
+        </Typography>
       </div>
     </div>
   );

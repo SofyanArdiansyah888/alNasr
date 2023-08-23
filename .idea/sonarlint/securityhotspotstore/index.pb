@@ -8,10 +8,6 @@ A
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 =
 tsconfig.json,6/1/61ebb9fd6e8cf9082658121d5d81e297791dacd0
-]
--src/components/sections/SectionFacilities.tsx,3/3/33bb8ab914ba2d2645bda68313fbf4c676d5c2df
-R
-"src/components/sections/Footer.tsx,a/f/af4b01b1e2b3ff492e1413808a436b538a9fe873
 Z
 *src/components/sections/SectionGallery.tsx,6/3/6323936b53f5d5916d254a0afa503e674b826086
 _
@@ -74,17 +70,31 @@ A
 src/lib/utils.tsx,f/9/f91beee32226a999ef9d19572b9c00c3f0033db7
 L
 src/components/ui/Button.tsx,d/b/db29c25587b6e5ae87206a4c72df6e43a602bf2c
-P
- src/components/ui/Typography.tsx,0/6/06522ded4d539ca830d07279c4496fa1ef7c7bb4
 @
 gatsby-config.ts,e/b/eb2f46220a81c3e48841d59b620f837cf54e63c0
 C
 src/content/hero.md,4/a/4aa83f065a27eefcfd0bc71d29c5300d58aef0c8
-Q
-!src/components/FacilitiesCard.tsx,e/b/eb8ce54bcc43cf17ce2706025f88af9ffccd2dcb
 C
 src/pages/index.tsx,d/2/d2d3bb60cab7e8c869b5fdf0a820b7edf2fc7859
 E
 src/styles/global.css,3/e/3ea85257d8c74ab2f79dac9121fc26edb558777a
 B
 tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
+Y
+)src/components/icons/QatarAirwaysIcon.tsx,d/2/d2d72746ef08b0fbb322edbf5cbc2a3b063071e1
+U
+%src/components/icons/EmiratesIcon.tsx,7/4/74bab096161be1d1e6cf00376a6893463c3ac8d3
+Z
+*src/components/icons/SaudiAirlinesIcon.tsx,0/2/026f61013638642b3d846ca552cb51e218c7102d
+\
+,src/components/sections/SectionCtaFlight.tsx,d/f/df025b6371bc568fba794a2ff12150b1c6583d51
+N
+src/components/PackageCard.tsx,6/3/6324682007c00fe0f23820227da626430cffff3a
+F
+src/content/package.md,9/f/9fc5649d4e98772fc1192a510f7a9bea399f4c9c
+I
+src/content/cta-flight.md,0/9/09c5eb26596d673f67503b904a047e11dc281e72
+P
+ src/components/ui/Typography.tsx,0/6/06522ded4d539ca830d07279c4496fa1ef7c7bb4
+D
+src/content/dream.md,1/3/13e1f7da2343b744cdedf8fe57bb84697e762baa

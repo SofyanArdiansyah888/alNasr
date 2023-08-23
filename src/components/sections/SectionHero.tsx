@@ -56,12 +56,11 @@ const SectionHero = () => {
           </div>
 
           {/*RIGHT*/}
-          <div className={"w-[500px] mx-auto"}>
+          <div className={"w-auto md:w-[500px] mx-auto"}>
             {data?.imageUrl?.childImageSharp && (
               <GatsbyImage
                 image={data.imageUrl.childImageSharp.gatsbyImageData}
                 alt={"Dream Image"}
-
               />
             )}
           </div>

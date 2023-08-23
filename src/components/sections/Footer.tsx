@@ -1,32 +1,36 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import {LogoIcon} from "../icons";
+import { LogoIcon } from "../icons";
 
 const Footer = () => {
   return (
-    <footer className={"container bg-secondary pt-12 pb-6"}>
-      <div className={"grid grid-cols-1 lg:grid-cols-5 gap-12"}>
-        <div className={" max-h-fit"}>
-          <div className={"flex flex-row py-3 px-6 bg-white rounded-md"}>
-            <LogoIcon className={"w-full"} />
-            <div className={"space-y-0 text-secondary"}>
-              <h6 className={"!text-sm"}>Al Hajj</h6>
-              <h6 className={"!text-sm"}>Umrah</h6>
+    <footer className={"bg-secondary "}>
+      <div className={"container pt-12 pb-6 "}>
+        <div className={"grid grid-cols-1 lg:grid-cols-5 gap-12"}>
+          <div className={" max-h-fit"}>
+            <div className={"flex flex-row py-3 px-6 bg-white rounded-md"}>
+              <LogoIcon className={"w-full"} />
+              <div className={"space-y-0 text-secondary"}>
+                <h6 className={"!text-sm"}>Al Hajj</h6>
+                <h6 className={"!text-sm"}>Umrah</h6>
+              </div>
             </div>
+            <p className={"text-sm text-white pt-4"}>
+              Comfortable and Quiet Worship, Our Service No. 1 in Indonesia
+            </p>
           </div>
-          <p className={"text-sm text-white pt-4"}>Comfortable and Quiet Worship, Our Service No. 1 in Indonesia</p>
+          <FooterLink />
+          <FooterLink />
+          <FooterLink />
+          <FooterLink />
         </div>
-        <FooterLink />
-        <FooterLink />
-        <FooterLink />
-        <FooterLink />
-      </div>
-      <hr className={"my-6"} />
-      <div className={"flex justify-between text-white items-center"}>
-        <p className={"text-xs"}>
-          Copyright © 2006 - 2023 Al Nasr Travel | All Reserverd
-        </p>
-        <div className={"flex gap-4"}></div>
+        <hr className={"my-6"} />
+        <div className={"flex justify-between text-white items-center"}>
+          <p className={"text-xs"}>
+            Copyright © 2006 - 2023 Al Nasr Travel | All Reserverd
+          </p>
+          <div className={"flex gap-4"}></div>
+        </div>
       </div>
     </footer>
   );
