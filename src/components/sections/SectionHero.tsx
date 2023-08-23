@@ -5,23 +5,23 @@ import { Button } from "components/ui/Button";
 import { graphql, useStaticQuery } from "gatsby";
 
 export const HeroQuery = graphql`
-  query Hero {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/" } }) {
-      nodes {
-        frontmatter {
-          buttonText
-          subtitle
-          title
-          pillText
-          imageUrl {
-            childImageSharp {
-              gatsbyImageData
-            }
+ query Hero {
+  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/hero/"}}) {
+    nodes {
+      frontmatter {
+        buttonText
+        subtitle
+        title
+        pillText
+        imageUrl {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
           }
         }
       }
     }
   }
+}
 `;
 const SectionHero = () => {
   const queryData = useStaticQuery<Queries.HeroQuery>(HeroQuery);
@@ -61,6 +61,7 @@ const SectionHero = () => {
               <GatsbyImage
                 image={data.imageUrl.childImageSharp.gatsbyImageData}
                 alt={"Dream Image"}
+
               />
             )}
           </div>

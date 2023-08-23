@@ -8,7 +8,7 @@ details: [
     description: "Al Nasr Special Umrah 9 Days $ 1,950/",
     per: "person",
     image: "../images/packages/image6.png",
-    features: [ "flight","ticket",'hotel',"visa" ],
+    features: [ "flight","ticket",'hostel',"visa","eat" ],
     detailText: "View Detail"
   },
   {
@@ -17,7 +17,7 @@ details: [
     description: "Al Nasr Special Umrah 17 Days $ 2.750/",
     per: "person",
     image: "../images/packages/image7.png",
-    features: [ "flight","ticket",'hotel',"visa" ],
+    features: [ "flight","ticket",'hostel',"visa","eat" ],
     detailText: "View Detail"
   },
   {
@@ -26,7 +26,7 @@ details: [
     description: "Al Nasr Special Umrah 25 Days $ 4.250/",
     per: "person",
     image: "../images/packages/image8.png",
-    features: [ "flight","ticket",'hotel',"visa" ],
+    features: [ "flight","ticket",'hostel',"visa","eat" ],
     detailText: "View Detail"
   },
   {
@@ -35,7 +35,7 @@ details: [
     description: "Al Nasr Special Umrah 30 Days $ 20,000/",
     per: "person",
     image: "../images/packages/image6.png",
-    features: [ "flight","ticket",'hotel',"visa" ],
+    features: [ "flight","ticket",'hostel',"visa","eat" ],
     detailText: "View Detail"
   },
   {
@@ -44,7 +44,7 @@ details: [
     description: "Al Nasr Special Hajj 30 Days $ 25.000/",
     per: "person",
     image: "../images/packages/image7.png",
-    features: [ "flight","ticket",'hotel',"visa" ],
+    features: [ "flight","ticket",'hostel',"visa","eat" ],
     detailText: "View Detail"
   },
   {

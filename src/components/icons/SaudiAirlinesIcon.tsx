@@ -11,10 +11,10 @@ const SaudiAirlinesIcon = ({
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <rect width="326" height="77" fill="url(#pattern0)" />
+    <rect width="326" height="77" fill="url(#pattern_saudi)" />
     <defs>
       <pattern
-        id="pattern0"
+        id="pattern_saudi"
         patternContentUnits="objectBoundingBox"
         width="1"
         height="1"

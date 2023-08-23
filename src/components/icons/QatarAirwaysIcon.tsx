@@ -12,10 +12,10 @@ const QatarAirwaysIcon = ({
     xmlnsXlink="http://www.w3.org/1999/xlink"
     {...props}
   >
-    <rect width="226" height="77" fill="url(#pattern0)" />
+    <rect width="226" height="77" fill="url(#pattern_qatar_airways)" />
     <defs>
       <pattern
-        id="pattern0"
+        id="pattern_qatar_airways"
         patternContentUnits="objectBoundingBox"
         width="1"
         height="1"

@@ -19,7 +19,7 @@ export const query = graphql`
           title
           image {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(placeholder: BLURRED)
               }
           }
           features {
@@ -34,7 +34,6 @@ export const query = graphql`
 const SectionDream = () => {
     const queryData = useStaticQuery<Queries.DreamQuery>(query);
     const data = queryData.allMarkdownRemark.nodes[0].frontmatter;
-
     return (
         <section className={" bg-lightSecondary"}>
             <div className={"flex flex-col lg:flex-row gap-24  py-24 container"}>

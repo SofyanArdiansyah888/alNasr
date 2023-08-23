@@ -10,10 +10,10 @@ const EmiratesIcon = ({ ...props }: React.ComponentPropsWithoutRef<"svg">) => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     {...props}
   >
-    <rect width="137" height="77" fill="url(#pattern0)" />
+    <rect width="137" height="77" fill="url(#pattern_emirates)" />
     <defs>
       <pattern
-        id="pattern0"
+        id="pattern_emirates"
         patternContentUnits="objectBoundingBox"
         width="1"
         height="1"

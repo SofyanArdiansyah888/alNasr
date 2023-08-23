@@ -12,7 +12,7 @@ features: [
   },
   {
     title: "Comfortable hotel with a rating of 4",
-    icon: "hotel",
+    icon: "hostel",
   },
   {
     title: "We cover the Visa Fee and it's Included",

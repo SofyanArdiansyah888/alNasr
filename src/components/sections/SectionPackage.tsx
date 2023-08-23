@@ -1,6 +1,5 @@
 import React from "react";
 import PackageCard from "../PackageCard";
-import { EmiratesIcon, GarudaIndonesiaIcon, QatarAirwaysIcon } from "../icons";
 import Typography from "components/ui/Typography";
 import { graphql, useStaticQuery } from "gatsby";
 
@@ -17,7 +16,7 @@ const query = graphql`
             detailText
             image {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(placeholder: BLURRED)
               }
             }
             per
@@ -34,7 +33,7 @@ const SectionPackage = () => {
   const queryData = useStaticQuery<Queries.PackagesQuery>(query);
   const data = queryData.allMarkdownRemark.nodes[0].frontmatter;
   return (
-    <section className={"container py-24 "}>
+    <section className={"container pt-24 "}>
       <Typography
         variant={"s54"}
         as={"h1"}

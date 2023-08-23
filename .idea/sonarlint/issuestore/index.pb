@@ -20,8 +20,6 @@ S
 #src/components/icons/SafetyIcon.tsx,9/c/9c1d9dfdc69edb1775dbe278a10fbfe5ee0aec0a
 ?
 prettierrc.json,3/c/3cae5e91040f6fd234e4325d61401f900e864ddd
-Z
-*src/components/icons/SaudiAirlinesIcon.tsx,0/2/026f61013638642b3d846ca552cb51e218c7102d
 Q
 !src/components/icons/VisaIcon.tsx,3/2/329402442a3aa38a0ad822d570cd4ff3bd0ce1cc
 R
@@ -50,8 +48,6 @@ N
 src/components/icons/index.tsx,5/8/58dbcd2decc865d43667322af6306a38d4567931
 A
 src/pages/404.tsx,b/3/b3c2bc325769eaeb64f06db54cb6700e22e4e48c
-Y
-)src/components/icons/QatarAirwaysIcon.tsx,d/2/d2d72746ef08b0fbb322edbf5cbc2a3b063071e1
 V
 &src/components/icons/ArrowLeftIcon.tsx,4/8/48abb58c0d67c28d4166526997d8f82c8027fcd1
 V
@@ -66,8 +62,6 @@ W
 ,src/components/icons/GarudaIndonesiaIcon.tsx,1/f/1f7ecc543a04eca1b03b9482445d58cd375c848b
 T
 $src/components/icons/VaccineIcon.tsx,0/1/01d190c47115520dae4c20b121ad88a98e6fad00
-U
-%src/components/icons/EmiratesIcon.tsx,7/4/74bab096161be1d1e6cf00376a6893463c3ac8d3
 V
 &src/components/icons/InstagramIcon.tsx,2/a/2ae4f29683417b1bd2b0bdded4b1a15ed6880eb6
 Q
@@ -78,3 +72,19 @@ T
 $src/components/icons/VehicleIcon.tsx,f/0/f032a0e502ccadf997df41aa8f9ad01f1d057f9b
 A
 src/lib/utils.tsx,f/9/f91beee32226a999ef9d19572b9c00c3f0033db7
+L
+src/components/ui/Button.tsx,d/b/db29c25587b6e5ae87206a4c72df6e43a602bf2c
+P
+ src/components/ui/Typography.tsx,0/6/06522ded4d539ca830d07279c4496fa1ef7c7bb4
+@
+gatsby-config.ts,e/b/eb2f46220a81c3e48841d59b620f837cf54e63c0
+C
+src/content/hero.md,4/a/4aa83f065a27eefcfd0bc71d29c5300d58aef0c8
+C
+src/pages/index.tsx,d/2/d2d3bb60cab7e8c869b5fdf0a820b7edf2fc7859
+B
+tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
+E
+src/styles/global.css,3/e/3ea85257d8c74ab2f79dac9121fc26edb558777a
+Q
+!src/components/FacilitiesCard.tsx,e/b/eb8ce54bcc43cf17ce2706025f88af9ffccd2dcb
