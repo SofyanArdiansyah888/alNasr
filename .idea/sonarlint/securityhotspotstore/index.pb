@@ -8,8 +8,6 @@ A
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 =
 tsconfig.json,6/1/61ebb9fd6e8cf9082658121d5d81e297791dacd0
-Z
-*src/components/sections/SectionGallery.tsx,6/3/6323936b53f5d5916d254a0afa503e674b826086
 _
 /src/components/sections/SectionTestimonials.tsx,b/8/b82ac32add6b7f6ed81904713383b71ee6878755
 S

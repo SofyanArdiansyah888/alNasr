@@ -1,27 +1,69 @@
 import React from "react";
-import FacilitiesCard from "../FacilitiesCard";
-import {StaticImage} from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import { graphql, useStaticQuery } from "gatsby";
+import Typography from "components/ui/Typography";
+
+export const query = graphql`
+  query Gallery {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/gallery/" } }) {
+      nodes {
+        frontmatter {
+          subtitle
+          title
+          galleries {
+            title
+            image {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 const SectionGallery = () => {
-    return <section className={"container py-24 bg-lightSecondary"}>
-        <h1 className={"max-w-4xl text-center mx-auto font-bold text-lightBlack"}>
-            Gallery Footage In Saudi Arabia
-        </h1>
-        <p
-            className={
-                "text-center text-xl mt-4 max-w-[32rem] mx-auto text-[#454545]"
-            }
+  const queryData = useStaticQuery<Queries.GalleryQuery>(query);
+  const data = queryData.allMarkdownRemark.nodes[0].frontmatter;
+
+  return (
+    <section className={"bg-lightSecondary"}>
+      <div className={"container py-24 "}>
+        <Typography
+          variant={"s54"}
+          as={"h1"}
+          className={"mx-auto text-center mb-4"}
         >
-            We provide comfort for our customers, with the various facilities we provide that we provide
-        </p>
-        <div className={"grid grid-cols-1 lg:grid-cols-3 gap-8 mt-20 "}>
-              <StaticImage src={"../../assets/images/image5.png"} alt={"Image I"} className={"row-span-2"} />
-              <StaticImage src={"../../assets/images/image1.png"} alt={"Image I"} />
-              <StaticImage src={"../../assets/images/image1.png"} alt={"Image I"} />
-              <StaticImage src={"../../assets/images/image1.png"} alt={"Image I"} />
-              <StaticImage src={"../../assets/images/image1.png"} alt={"Image I"} />
+          {data?.title}
+        </Typography>
+        <Typography
+          variant={"s24"}
+          as={"p"}
+          color={"light-dark"}
+          className={"max-w-2xl text-center mx-auto"}
+        >
+          {data?.subtitle}
+        </Typography>
+        <div className={"grid grid-cols-1 lg:grid-cols-3 gap-4 mt-20 "}>
+          {data?.galleries?.map((props, index) => {
+            return (
+              <div className={`${index === 0 && "row-span-2"}`}>
+                {props?.image?.childImageSharp && (
+                  <GatsbyImage
+                    image={props?.image?.childImageSharp?.gatsbyImageData}
+                    alt={props?.title as string}
+                    className={`${index === 0 ? "" : ""}`}
+                  />
+                )}
+              </div>
+            );
+          })}
         </div>
+      </div>
     </section>
-}
+  );
+};
 
 export default SectionGallery;
