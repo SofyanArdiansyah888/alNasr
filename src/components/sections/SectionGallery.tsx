@@ -1,5 +1,9 @@
 import React from "react";
-import {GatsbyImage, IGatsbyImageData, StaticImage} from "gatsby-plugin-image";
+import {
+  GatsbyImage,
+  IGatsbyImageData,
+  StaticImage,
+} from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
 import Typography from "components/ui/Typography";
 
@@ -8,13 +12,15 @@ export const query = graphql`
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/gallery/" } }) {
       nodes {
         frontmatter {
-          subtitle
-          title
-          galleries {
+          gallery {
+            subtitle
             title
-            image {
-              childImageSharp {
-                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+            galleries {
+              title
+              image {
+                childImageSharp {
+                  gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+                }
               }
             }
           }
@@ -26,7 +32,7 @@ export const query = graphql`
 
 const SectionGallery = () => {
   const queryData = useStaticQuery<Queries.GalleryQuery>(query);
-  const data = queryData.allMarkdownRemark.nodes[0].frontmatter;
+  const data = queryData.allMarkdownRemark.nodes[0].frontmatter?.gallery;
 
   return (
     <section className={"bg-lightSecondary"}>
@@ -46,19 +52,22 @@ const SectionGallery = () => {
         >
           {data?.subtitle}
         </Typography>
-        <div className={"grid grid-cols-1 lg:grid-cols-4  mt-20 "}>
+        <div className={"grid grid-cols-1 lg:grid-cols-4  mt-20 gap-4 "}>
           {data?.galleries?.map((props, index) => {
             return (
-              <div className={`grid ${index === 0 && "row-span-2 col-span-2"} `}>
-                {/*{props?.image?.childImageSharp && (*/}
-                <div className={`${index === 0 ? " w-full" : "w-[290px] h-auto "} rounded-xl`}>
+              <div
+                className={`grid ${index === 0 && "row-span-2 col-span-2"} `}
+              >
+                <div className={`${index === 0 ? " w-full " : ""} rounded-xl`}>
                   <GatsbyImage
-                    image={props?.image?.childImageSharp?.gatsbyImageData as IGatsbyImageData}
+                    image={
+                      props?.image?.childImageSharp
+                        ?.gatsbyImageData as IGatsbyImageData
+                    }
                     alt={props?.title as string}
-                    className={`${index === 0 ? "h-[600px] rounded-4xl" : "" }`}
+                    className={`${index === 0 && "h-[660px]"} rounded-xl brightness-90`}
                   />
                 </div>
-                {/*)}*/}
               </div>
             );
           })}

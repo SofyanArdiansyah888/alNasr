@@ -72,7 +72,3 @@ Z
 *src/components/icons/SaudiAirlinesIcon.tsx,0/2/026f61013638642b3d846ca552cb51e218c7102d
 U
 %src/components/icons/EmiratesIcon.tsx,7/4/74bab096161be1d1e6cf00376a6893463c3ac8d3
-N
-src/components/PackageCard.tsx,6/3/6324682007c00fe0f23820227da626430cffff3a
-\
-,src/components/sections/SectionCtaFlight.tsx,d/f/df025b6371bc568fba794a2ff12150b1c6583d51

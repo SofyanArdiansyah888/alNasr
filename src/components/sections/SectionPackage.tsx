@@ -8,20 +8,22 @@ const query = graphql`
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/package/" } }) {
       nodes {
         frontmatter {
-          subtitle
-          title
-          details {
-            name
-            description
-            detailText
-            image {
-              childImageSharp {
-                gatsbyImageData(placeholder: BLURRED)
+          package {
+            subtitle
+            title
+            details {
+              name
+              description
+              detailText
+              image {
+                childImageSharp {
+                  gatsbyImageData(placeholder: BLURRED)
+                }
               }
+              per
+              promo
+              features
             }
-            per
-            promo
-            features
           }
         }
       }
@@ -31,8 +33,9 @@ const query = graphql`
 
 const SectionPackage = () => {
   const queryData = useStaticQuery<Queries.PackagesQuery>(query);
-  const data = queryData.allMarkdownRemark.nodes[0].frontmatter;
-  return (
+  const data = queryData.allMarkdownRemark.nodes[0].frontmatter?.package;
+    if(data)
+    return (
     <section className={"container pt-24 "}>
       <Typography
         variant={"s54"}
@@ -51,12 +54,10 @@ const SectionPackage = () => {
       </Typography>
 
       <div className={"grid grid-cols-1 lg:grid-cols-3 mt-24 gap-16"}>
-        {data?.details?.map((props, index) => (
-          props && <PackageCard {...props} key={index} />
-        ))}
+        {data?.details?.map(
+          (props, index) => props && <PackageCard {...props}  key={index} />,
+        )}
       </div>
-
-
     </section>
   );
 };

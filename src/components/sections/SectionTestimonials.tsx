@@ -1,14 +1,53 @@
 import React from "react";
 import Typography from "components/ui/Typography";
+import { graphql, useStaticQuery } from "gatsby";
 
+const query = graphql`
+  query Testimony {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/testimony/" } }) {
+      nodes {
+        frontmatter {
+          testimony {
+            subtitle
+            title
+            customers {
+              name
+              description
+              package
+              star
+              image {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 const SectionTestimonials = () => {
-    return <section className={"container"}>
+  const queryData = useStaticQuery<Queries.TestimonyQuery>(query);
+  const data = queryData?.allMarkdownRemark?.nodes[0]?.frontmatter?.testimony;
 
-            <Typography variant={"s54"} as={"h1"} color={"light-dark"} className={"!text-right"}>Hello World</Typography>
-            <Typography variant={"s20"} as={"p"} className={"text-right"}>This</Typography>
-
-
+  return (
+    <section className={"container"}>
+      <Typography
+        variant={"s54"}
+        as={"h1"}
+        color={"light-dark"}
+        className={"!text-right"}
+      >
+        {data?.title}
+      </Typography>
+      <Typography variant={"s20"} as={"p"} className={"text-right"}>
+        {data?.subtitle}
+      </Typography>
     </section>
-}
+  );
+};
 
 export default SectionTestimonials;

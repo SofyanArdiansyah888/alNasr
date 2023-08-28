@@ -1,22 +1,8 @@
 import React from "react";
-import {
-  GatsbyImage,
-  IGatsbyImageData,
-  StaticImage,
-} from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { FlightIcon } from "./icons";
 import { EatIcon, HostelIcon, TicketIcon, VisaIcon } from "components/icons";
 import Typography from "components/ui/Typography";
-
-type PackageCardType = {
-  name: string | null;
-  description: string | null;
-  promo: string | null;
-  per: string | null;
-  image: any | null;
-  features: readonly (string | null)[] | null;
-  detailText?: string | null;
-};
 
 const PackageCard = ({
   image,
@@ -26,7 +12,7 @@ const PackageCard = ({
   per,
   features,
   detailText,
-}: PackageCardType) => {
+}: Queries.MarkdownRemarkFrontmatterPackageDetails) => {
   if (name !== "Soon Program")
     return (
       <div className={"custom-shadow pt-6 pl-6 rounded-md"}>
@@ -76,9 +62,15 @@ const PackageCard = ({
       </div>
     );
 
-  return <div className={"custom-shadow rounded-md flex items-center justify-center"}>
-      <Typography variant={"s24"} color={"secondary"}>{name}</Typography>
-  </div>
+  return (
+    <div
+      className={"custom-shadow rounded-md flex items-center justify-center"}
+    >
+      <Typography variant={"s24"} color={"secondary"}>
+        {name}
+      </Typography>
+    </div>
+  );
 };
 
 export default PackageCard;

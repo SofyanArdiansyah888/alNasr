@@ -5,27 +5,29 @@ import { Button } from "components/ui/Button";
 import { graphql, useStaticQuery } from "gatsby";
 
 export const HeroQuery = graphql`
- query Hero {
-  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/hero/"}}) {
-    nodes {
-      frontmatter {
-        buttonText
-        subtitle
-        title
-        pillText
-        imageUrl {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED)
+  query Hero {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/" } }) {
+      nodes {
+        frontmatter {
+          hero {
+            buttonText
+            subtitle
+            title
+            pillText
+            imageUrl {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
           }
         }
       }
     }
   }
-}
 `;
 const SectionHero = () => {
   const queryData = useStaticQuery<Queries.HeroQuery>(HeroQuery);
-  const data = queryData.allMarkdownRemark.nodes[0].frontmatter;
+  const data = queryData.allMarkdownRemark.nodes[0].frontmatter?.hero;
   return (
     <section className={"bg-gradient-yellow"}>
       <div className={"container"}>

@@ -13,10 +13,12 @@ export const query = graphql`
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/cta-flight/" } }) {
       nodes {
         frontmatter {
-          subtitle
-          title
-          rating
-          images
+          cta {
+            subtitle
+            title
+            rating
+            images
+          }
         }
       }
     }
@@ -25,7 +27,7 @@ export const query = graphql`
 
 const SectionCtaFlight = () => {
   const queryData = useStaticQuery<Queries.CTAFlightQuery>(query);
-  const data = queryData.allMarkdownRemark.nodes[0].frontmatter;
+  const data = queryData.allMarkdownRemark.nodes[0].frontmatter?.cta;
   return (
     <section className={"container pb-24 "}>
       <div className={"flex flex-row mt-24 gap-24 items-center"}>
@@ -41,7 +43,9 @@ const SectionCtaFlight = () => {
             {data?.rating}
           </button>
         </div>
-        <div className={"space-x-12 max-h-[100px] flex overflow-x-scroll w-screen"}>
+        <div
+          className={"space-x-12 max-h-[100px] flex overflow-x-scroll w-screen"}
+        >
           <GarudaIndonesiaIcon />
           <QatarAirwaysIcon />
           <EmiratesIcon />

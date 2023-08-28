@@ -8,12 +8,14 @@ const query = graphql`
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/facility/" } }) {
       nodes {
         frontmatter {
-          subtitle
-          title
-          facilities {
-            title
+          facility {
             subtitle
-            icon
+            title
+            facilities {
+              title
+              subtitle
+              icon
+            }
           }
         }
       }
@@ -23,7 +25,7 @@ const query = graphql`
 
 const SectionFacilities = () => {
   const queryData = useStaticQuery<Queries.FacilityQuery>(query);
-  const data = queryData.allMarkdownRemark.nodes[0].frontmatter;
+  const data = queryData.allMarkdownRemark.nodes[0].frontmatter?.facility;
   return (
     <section className={"bg-lightSecondary"}>
       <div className={"container py-24 "}>
