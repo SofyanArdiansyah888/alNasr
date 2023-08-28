@@ -1,5 +1,5 @@
 import React from "react";
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import {GatsbyImage, IGatsbyImageData, StaticImage} from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
 import Typography from "components/ui/Typography";
 
@@ -14,7 +14,7 @@ export const query = graphql`
             title
             image {
               childImageSharp {
-                gatsbyImageData(placeholder: BLURRED)
+                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
               }
             }
           }
@@ -46,17 +46,19 @@ const SectionGallery = () => {
         >
           {data?.subtitle}
         </Typography>
-        <div className={"grid grid-cols-1 lg:grid-cols-3 gap-4 mt-20 "}>
+        <div className={"grid grid-cols-1 lg:grid-cols-4  mt-20 "}>
           {data?.galleries?.map((props, index) => {
             return (
-              <div className={`${index === 0 && "row-span-2"}`}>
-                {props?.image?.childImageSharp && (
+              <div className={`grid ${index === 0 && "row-span-2 col-span-2"} `}>
+                {/*{props?.image?.childImageSharp && (*/}
+                <div className={`${index === 0 ? " w-full" : "w-[290px] h-auto "} rounded-xl`}>
                   <GatsbyImage
-                    image={props?.image?.childImageSharp?.gatsbyImageData}
+                    image={props?.image?.childImageSharp?.gatsbyImageData as IGatsbyImageData}
                     alt={props?.title as string}
-                    className={`${index === 0 ? "" : ""}`}
+                    className={`${index === 0 ? "h-[600px] rounded-4xl" : "" }`}
                   />
-                )}
+                </div>
+                {/*)}*/}
               </div>
             );
           })}
