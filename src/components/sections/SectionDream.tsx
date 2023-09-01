@@ -44,7 +44,7 @@ const SectionDream = () => {
           {data?.image?.childImageSharp && (
             <GatsbyImage
               image={data?.image?.childImageSharp.gatsbyImageData}
-              alt={"Sultan Aceh"}
+              alt={data?.title as string}
             />
           )}
         </div>

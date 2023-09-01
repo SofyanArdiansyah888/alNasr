@@ -34,8 +34,8 @@ const query = graphql`
 const SectionPackage = () => {
   const queryData = useStaticQuery<Queries.PackagesQuery>(query);
   const data = queryData.allMarkdownRemark.nodes[0].frontmatter?.package;
-    if(data)
-    return (
+
+  return (
     <section className={"container pt-24 "}>
       <Typography
         variant={"s54"}
@@ -55,7 +55,7 @@ const SectionPackage = () => {
 
       <div className={"grid grid-cols-1 lg:grid-cols-3 mt-24 gap-16"}>
         {data?.details?.map(
-          (props, index) => props && <PackageCard {...props}  key={index} />,
+          (props, index) => props && <PackageCard {...props} key={index} />,
         )}
       </div>
     </section>

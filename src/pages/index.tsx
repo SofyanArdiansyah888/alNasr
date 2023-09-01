@@ -10,16 +10,18 @@ import SectionCtaFlight from "components/sections/SectionCtaFlight";
 
 const IndexPage = () => {
   return (
-    <main>
-      <SectionHero />
-      <SectionDream />
-      <SectionPackage />
-      <SectionCtaFlight />
-      <SectionFacilities />
-      <SectionTestimonials />
-      <SectionGallery />
+    <>
+      <main>
+        <SectionHero />
+        <SectionDream />
+        <SectionPackage />
+        <SectionCtaFlight />
+        <SectionFacilities />
+        <SectionTestimonials />
+        <SectionGallery />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 };
 
