@@ -65,7 +65,7 @@ const SectionGallery = () => {
                         ?.gatsbyImageData as IGatsbyImageData
                     }
                     alt={props?.title as string}
-                    className={`${index === 0 && "h-[660px]"} rounded-xl brightness-90`}
+                    className={`${index === 0 && "h-[660px] w-full"} rounded-xl brightness-90`}
                   />
                 </div>
               </div>
