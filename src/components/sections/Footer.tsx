@@ -1,9 +1,37 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import { LogoIcon } from "../icons";
-import Typography from "components/ui/Typography";
+import { graphql, useStaticQuery } from "gatsby";
+import FooterLink from "components/FooterLink";
 
+const footerQuery = graphql`
+  query Footer {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/footer/" } }) {
+      nodes {
+        frontmatter {
+          footer {
+            copyright
+            links {
+              submenus {
+                link
+                title
+              }
+              title
+            }
+            title
+            socials {
+              icon
+              link
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 const Footer = () => {
+  const queryData = useStaticQuery<Queries.FooterQuery>(footerQuery);
+  const data = queryData?.allMarkdownRemark?.nodes[0].frontmatter?.footer;
+
   return (
     <footer className={"bg-secondary "}>
       <div className={"container pt-12 pb-6 "}>
@@ -12,7 +40,6 @@ const Footer = () => {
             <div className={"flex flex-row py-3 px-6 bg-white rounded-md"}>
               <div className={"flex gap-2"}>
                 <LogoIcon className={"w-full"} />
-
               </div>
 
               <div className={"space-y-0 text-secondary"}>
@@ -20,20 +47,13 @@ const Footer = () => {
                 <h6 className={"!text-sm"}>Umrah</h6>
               </div>
             </div>
-            <p className={"text-sm text-white pt-4"}>
-              Comfortable and Quiet Worship, Our Service No. 1 in Indonesia
-            </p>
+            <p className={"text-sm text-white pt-4"}>{data?.title}</p>
           </div>
-          <FooterLink />
-          <FooterLink />
-          <FooterLink />
-          <FooterLink />
+          {data?.links?.map((props) => props && <FooterLink {...props} />)}
         </div>
         <hr className={"my-6"} />
         <div className={"flex justify-between text-white items-center"}>
-          <p className={"text-xs"}>
-            Copyright © 2006 - 2023 Al Nasr Travel | All Reserverd
-          </p>
+          <p className={"text-xs"}>{data?.copyright}</p>
           <div className={"flex gap-4"}></div>
         </div>
       </div>
@@ -41,16 +61,6 @@ const Footer = () => {
   );
 };
 
-const FooterLink = () => (
-  <div className={"text-white"}>
-    <p className={"text-xl font-semibold"}>Quick Link</p>
-    <ul className={"space-y-2 mt-4 text-md"}>
-      <li>About Us</li>
-      <li>Flight Accommodation</li>
-      <li>Facilities</li>
-      <li>Gallery</li>
-    </ul>
-  </div>
-);
+
 
 export default Footer;

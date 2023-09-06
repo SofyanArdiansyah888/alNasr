@@ -79,8 +79,6 @@ C
 src/content/hero.md,4/a/4aa83f065a27eefcfd0bc71d29c5300d58aef0c8
 F
 src/content/gallery.md,4/3/43094bf78f9fa22888df8a7ab8c8229c3cfe2b2a
-G
-src/content/facility.md,6/5/655ec536f2854b5a0884042299540fe76a48602a
 D
 src/content/dream.md,1/3/13e1f7da2343b744cdedf8fe57bb84697e762baa
 E
@@ -95,7 +93,5 @@ X
 (src/components/sections/SectionDream.tsx,2/e/2e8e5e31f55945f604431d4538d798fc8ce931cd
 Z
 *src/components/sections/SectionPackage.tsx,e/8/e84c7baffd39a0f81ca14c1f59b6ecdd54d2c2e6
-]
--src/components/sections/SectionFacilities.tsx,3/3/33bb8ab914ba2d2645bda68313fbf4c676d5c2df
 N
 src/components/PackageCard.tsx,6/3/6324682007c00fe0f23820227da626430cffff3a
