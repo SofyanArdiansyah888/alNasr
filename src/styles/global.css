@@ -11,11 +11,12 @@ p, li, button {
     font-family: 'Nunito Variable', sans-serif;
 }
 
-
-
 /*SHADOW*/
 .custom-shadow{
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.12);
+}
+.container{
+    @apply mx-6 lg:mx-auto
 }
 .btn-blue{
     @apply px-8 py-1 text-secondary bg-lightBlue rounded-full max-w-fit

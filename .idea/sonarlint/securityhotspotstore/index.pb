@@ -59,14 +59,10 @@ U
 %src/components/icons/EmiratesIcon.tsx,7/4/74bab096161be1d1e6cf00376a6893463c3ac8d3
 Z
 *src/components/icons/SaudiAirlinesIcon.tsx,0/2/026f61013638642b3d846ca552cb51e218c7102d
-P
- src/components/ui/Typography.tsx,0/6/06522ded4d539ca830d07279c4496fa1ef7c7bb4
 B
 tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
 S
 #src/components/icons/SafetyIcon.tsx,9/c/9c1d9dfdc69edb1775dbe278a10fbfe5ee0aec0a
-E
-src/styles/global.css,3/e/3ea85257d8c74ab2f79dac9121fc26edb558777a
 A
 gatsby-browser.js,c/8/c8df22cf90adfac9a95adc94b85984d3a6b193cd
 F
@@ -81,11 +77,3 @@ I
 src/content/cta-flight.md,0/9/09c5eb26596d673f67503b904a047e11dc281e72
 H
 src/content/testimony.md,9/2/9202cefa422997ae94bbf441da314b1ab53feb76
-X
-(src/components/sections/SectionDream.tsx,2/e/2e8e5e31f55945f604431d4538d798fc8ce931cd
-W
-'src/components/sections/SectionHero.tsx,2/e/2e4e98f45d423133b68c55da87b69e3410a23e9d
-Z
-*src/components/sections/SectionPackage.tsx,e/8/e84c7baffd39a0f81ca14c1f59b6ecdd54d2c2e6
-N
-src/components/PackageCard.tsx,6/3/6324682007c00fe0f23820227da626430cffff3a

@@ -38,9 +38,9 @@ const SectionDream = () => {
   const data = queryData.allMarkdownRemark.nodes[0].frontmatter?.dream;
   return (
     <section className={" bg-lightSecondary"}>
-      <div className={"flex flex-col lg:flex-row gap-24  py-24 container"}>
+      <div className={"flex flex-col-reverse lg:flex-row gap-24  py-24 container"}>
         {/*LEFT*/}
-        <div className={"w-3/4"}>
+        <div className={"w-[350px] lg:w-3/4 mx-auto"}>
           {data?.image?.childImageSharp && (
             <GatsbyImage
               image={data?.image?.childImageSharp.gatsbyImageData}
@@ -72,7 +72,7 @@ const SectionDream = () => {
               </li>
             ))}
           </ul>
-          <div className={"flex gap-12"}>
+          <div className={"flex gap-4 lg:gap-12"}>
             <Button>{data?.buttonText}</Button>
             <Button variant={"outline"}>{data?.buttonTextOutline}</Button>
           </div>

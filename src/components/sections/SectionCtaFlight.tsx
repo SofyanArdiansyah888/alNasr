@@ -30,7 +30,7 @@ const SectionCtaFlight = () => {
   const data = queryData.allMarkdownRemark.nodes[0].frontmatter?.cta;
   return (
     <section className={"container pb-24 "}>
-      <div className={"flex flex-row mt-24 gap-24 items-center"}>
+      <div className={"flex flex-col lg:flex-row mt-24 gap-24 items-center"}>
         <div className={"text-lightBlack space-y-4"}>
           <h4 className={"max-w-[16rem] leading-tight font-[900] text-3xl"}>
             {data?.title}

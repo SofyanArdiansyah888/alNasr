@@ -56,16 +56,16 @@ const SectionGallery = () => {
           {data?.galleries?.map((props, index) => {
             return (
               <div
-                className={`grid ${index === 0 && "row-span-2 col-span-2"} `}
+                className={`grid ${index === 0 && "lg:row-span-2 lg:col-span-2"} `}
               >
-                <div className={`${index === 0 ? " w-full " : ""} rounded-xl`}>
+                <div className={`${index === 0 ? " lg:w-full " : ""} rounded-xl`}>
                   <GatsbyImage
                     image={
                       props?.image?.childImageSharp
                         ?.gatsbyImageData as IGatsbyImageData
                     }
                     alt={props?.title as string}
-                    className={`${index === 0 && "h-[660px] w-full"} rounded-xl brightness-90`}
+                    className={`${index === 0 && "h-[350px] lg:h-[660px] w-[330px] lg:w-full"} rounded-xl brightness-90`}
                   />
                 </div>
               </div>

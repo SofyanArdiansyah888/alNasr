@@ -50,9 +50,9 @@ const Footer = () => {
           {data?.links?.map((props) => props && <FooterLink {...props} />)}
         </div>
         <hr className={"my-6"} />
-        <div className={"flex justify-between text-white items-center"}>
+        <div className={"flex flex-col lg:flex-row gap-4 lg:gap-0  justify-between text-white items-center"}>
           <p className={"text-xs"}>{data?.copyright}</p>
-          <div className={"flex gap-4"}>
+          <div className={"flex  gap-4"}>
             {data?.socials?.map((social, index) => {
               return (
                 <div key={index} className={"flex gap-1"}>

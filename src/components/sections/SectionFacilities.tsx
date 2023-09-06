@@ -33,7 +33,7 @@ const SectionFacilities = () => {
           as={"h1"}
           variant={"s54"}
           color={"light-dark"}
-          className={"mx-auto text-center mb-4"}
+          className={"mx-auto lg:!text-center mb-4"}
         >
           {data?.title}
         </Typography>

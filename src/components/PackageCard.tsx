@@ -64,7 +64,7 @@ const PackageCard = ({
 
   return (
     <div
-      className={"custom-shadow rounded-md flex items-center justify-center"}
+      className={"custom-shadow rounded-md flex items-center justify-center min-h-[400px]"}
     >
       <Typography variant={"s24"} color={"secondary"}>
         {name}

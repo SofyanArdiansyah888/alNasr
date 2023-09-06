@@ -58,7 +58,7 @@ const SectionHero = () => {
           </div>
 
           {/*RIGHT*/}
-          <div className={"w-auto md:w-[500px] mx-auto"}>
+          <div className={"w-[350px] md:w-[500px] justify-center"}>
             {data?.imageUrl?.childImageSharp && (
               <GatsbyImage
                 image={data.imageUrl.childImageSharp.gatsbyImageData}

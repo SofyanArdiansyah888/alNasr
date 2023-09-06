@@ -40,10 +40,10 @@ const Typography: TypographyComponent = React.forwardRef(
                 ref={ref}
                 className={cn(
                     [
-                        variant === "s54" && ["text-[50px] font-extrabold !leading-[140%] text-justify"],
-                        variant === "s24" && ["text-[24px] font-[500]"],
-                        variant === "s20" && ["text-[20px] font-[500]"],
-                        variant === "s16" && ["text-[16px]"],
+                        variant === "s54" && ["text-[24px] lg:text-[50px] font-extrabold !leading-[140%] lg:text-justify"],
+                        variant === "s24" && ["text-[20px] lg:text-[24px] font-[500]"],
+                        variant === "s20" && ["text-[16px] lg:text-[20px] font-[500] max-w-xs lg:max-w-max"],
+                        variant === "s16" && ["text-[12px]"],
                         variant === "s14" && ["text-[14px]"],
                         variant === "s12" && ["text-[12px]"],
                         variant === "s10" && ["text-[10px]"],

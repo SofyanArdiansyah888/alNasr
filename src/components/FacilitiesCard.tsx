@@ -21,7 +21,7 @@ const FacilitiesCard = ({
   icon?: string | null;
 }) => {
   return (
-    <div className={"custom-shadow rounded-md p-4 flex gap-2 bg-white"}>
+    <div className={"custom-shadow items-center lg:items-start rounded-md p-4 flex gap-2 bg-white"}>
       <div className={"w-16"}>
         {icon === "safety" && <SafetyIcon />}
         {icon === "conseling" && <ConselingIcon />}
