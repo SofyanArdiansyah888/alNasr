@@ -2,7 +2,7 @@ import React from "react";
 import Typography from "components/ui/Typography";
 import { graphql, useStaticQuery } from "gatsby";
 import { Button } from "components/ui/Button";
-import { ArrowLeftIcon } from "components/icons";
+import {ArrowLeftIcon, ArrowRightIcon} from "components/icons";
 
 const query = graphql`
   query Testimony {
@@ -85,7 +85,7 @@ const SectionTestimonials = () => {
       </div>
         <Button size={"md"} className={"flex gap-3 float-right mt-8 !px-6 "}>
             Next
-            <ArrowLeftIcon />
+            <ArrowRightIcon />
         </Button>
     </section>
   );

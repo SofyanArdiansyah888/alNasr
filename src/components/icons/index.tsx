@@ -22,6 +22,8 @@ import VaccineIcon from "./VaccineIcon";
 import VisaIcon from "./VisaIcon";
 import YoutubeIcon from "./YoutubeIcon";
 import VehicleIcon from "./VehicleIcon";
+import LogoTextIcon from "./LogoTextIcon";
+import ArrowRightIcon from "./ArrowRightIcon";
 
 export {
   ArrowLeftIcon,
@@ -48,4 +50,6 @@ export {
   VisaIcon,
   YoutubeIcon,
   VehicleIcon,
+  LogoTextIcon,
+  ArrowRightIcon,
 };

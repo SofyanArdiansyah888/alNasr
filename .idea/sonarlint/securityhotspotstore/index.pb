@@ -19,8 +19,6 @@ P
  src/components/icons/EatIcon.tsx,e/1/e1fbc49a4e1752f79641c07a250c55dd489db104
 S
 #src/components/icons/HostelIcon.tsx,7/6/764edd6c856b45168ba0e3b04b301c752f3dca14
-Q
-!src/components/icons/LogoIcon.tsx,6/1/615651dae37601dc4e40b7c6dc8eb905aae1067b
 S
 #src/components/icons/HealthIcon.tsx,6/3/63306c797c24ca4f766843ae77bec2a43d2d714d
 S
@@ -29,12 +27,8 @@ T
 $src/components/icons/YoutubeIcon.tsx,8/f/8f40c7759348aff67148f5443345afe1e95da84e
 T
 $src/components/icons/TwitterIcon.tsx,7/1/71b50332efdd142a3fb0ee8010e3e13b60c78dbe
-N
-src/components/icons/index.tsx,5/8/58dbcd2decc865d43667322af6306a38d4567931
 A
 src/pages/404.tsx,b/3/b3c2bc325769eaeb64f06db54cb6700e22e4e48c
-V
-&src/components/icons/ArrowLeftIcon.tsx,4/8/48abb58c0d67c28d4166526997d8f82c8027fcd1
 V
 &src/components/icons/ConselingIcon.tsx,2/a/2a06ff9f964723215af5871929a5d902f1a137b5
 S
