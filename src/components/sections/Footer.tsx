@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { LogoIcon } from "../icons";
+import Typography from "components/ui/Typography";
 
 const Footer = () => {
   return (
@@ -9,7 +10,11 @@ const Footer = () => {
         <div className={"grid grid-cols-1 lg:grid-cols-5 gap-12"}>
           <div className={" max-h-fit"}>
             <div className={"flex flex-row py-3 px-6 bg-white rounded-md"}>
-              <LogoIcon className={"w-full"} />
+              <div className={"flex gap-2"}>
+                <LogoIcon className={"w-full"} />
+
+              </div>
+
               <div className={"space-y-0 text-secondary"}>
                 <h6 className={"!text-sm"}>Al Hajj</h6>
                 <h6 className={"!text-sm"}>Umrah</h6>

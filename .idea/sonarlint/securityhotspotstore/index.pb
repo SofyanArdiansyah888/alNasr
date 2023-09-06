@@ -65,8 +65,6 @@ U
 %src/components/icons/EmiratesIcon.tsx,7/4/74bab096161be1d1e6cf00376a6893463c3ac8d3
 Z
 *src/components/icons/SaudiAirlinesIcon.tsx,0/2/026f61013638642b3d846ca552cb51e218c7102d
-R
-"src/components/sections/Footer.tsx,a/f/af4b01b1e2b3ff492e1413808a436b538a9fe873
 P
  src/components/ui/Typography.tsx,0/6/06522ded4d539ca830d07279c4496fa1ef7c7bb4
 B

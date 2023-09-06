@@ -94,13 +94,13 @@ const SectionTestimonials = () => {
 const Card = () => {
   return (
     <div
-      className={"custom-shadow rounded-xl py-[20px] px-8 w-[350px] shrink-0"}
+      className={"custom-shadow rounded-xl py-[20px] px-8 w-[400px] shrink-0"}
     >
-      <Button variant={"secondary"} size={"sm"} className={"rounded-full text-xs !text-left"}>
+      <Button variant={"secondary"} size={"sm"} className={"rounded-full !px-4 text-xs !text-left"}>
         Al Nasr Umrah
       </Button>
       <Typography variant={"s24"} className={"mt-4"}>Abd Jamiah</Typography>
-      <Typography variant={"s14"}>
+      <Typography variant={"s14"} className={"text-justify"}>
         I am very satisfied with Al Nasr Travel's service, starting from when we
         arrived in Saudi until we returned to Indonesia. We provide very good
         service.
