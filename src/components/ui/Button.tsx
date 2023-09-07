@@ -13,13 +13,13 @@ const buttonVariants = cva(
             },
             size: {
                 md: "py-[14px] px-4 lg:!px-16 font-[700] text-[20px]",
-                sm: "py-2 !px-[40px] rounded-md ",
+                sm: "py-3 !px-[40px] rounded-md ",
                 lg: "h-11 rounded-md px-8",
                 icon: "h-10 w-10",
             },
             text:{
                 s24: "text-[20px] lg:text-[24px]",
-                s20: 'text-[16px] lg:text-[20px]'
+                s20: 'text-[16px] lg:text-[18px]'
             }
         },
         defaultVariants: {

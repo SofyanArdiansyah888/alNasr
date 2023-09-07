@@ -86,8 +86,6 @@ G
 src/content/facility.md,6/5/655ec536f2854b5a0884042299540fe76a48602a
 M
 src/components/FooterLink.tsx,b/c/bcaba893bb8938ab129a3054c54cc2aa2ca92b89
-Q
-!src/components/icons/LogoIcon.tsx,6/1/615651dae37601dc4e40b7c6dc8eb905aae1067b
 U
 %src/components/icons/LogoTextIcon.tsx,9/b/9b18fbf3226a7311c67c549b0d3854f42f100a49
 V

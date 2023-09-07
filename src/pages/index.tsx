@@ -7,11 +7,13 @@ import SectionTestimonials from "components/sections/SectionTestimonials";
 import SectionGallery from "components/sections/SectionGallery";
 import Footer from "components/sections/Footer";
 import SectionCtaFlight from "components/sections/SectionCtaFlight";
+import Navbar from "components/sections/Navbar";
 
 const IndexPage = () => {
   return (
     <>
       <main>
+        <Navbar />
         <SectionHero />
         <SectionDream />
         <SectionPackage />
