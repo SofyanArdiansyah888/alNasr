@@ -27,8 +27,6 @@ T
 $src/components/icons/YoutubeIcon.tsx,8/f/8f40c7759348aff67148f5443345afe1e95da84e
 T
 $src/components/icons/TwitterIcon.tsx,7/1/71b50332efdd142a3fb0ee8010e3e13b60c78dbe
-A
-src/pages/404.tsx,b/3/b3c2bc325769eaeb64f06db54cb6700e22e4e48c
 V
 &src/components/icons/ConselingIcon.tsx,2/a/2a06ff9f964723215af5871929a5d902f1a137b5
 S
@@ -51,8 +49,6 @@ T
 $src/components/icons/VehicleIcon.tsx,f/0/f032a0e502ccadf997df41aa8f9ad01f1d057f9b
 A
 src/lib/utils.tsx,f/9/f91beee32226a999ef9d19572b9c00c3f0033db7
-@
-gatsby-config.ts,e/b/eb2f46220a81c3e48841d59b620f837cf54e63c0
 Y
 )src/components/icons/QatarAirwaysIcon.tsx,d/2/d2d72746ef08b0fbb322edbf5cbc2a3b063071e1
 Z
