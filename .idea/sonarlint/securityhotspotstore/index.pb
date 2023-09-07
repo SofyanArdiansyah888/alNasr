@@ -96,23 +96,15 @@ W
 'src/components/icons/ArrowRightIcon.tsx,8/3/839bd0ab4bdba51c5904ac57e7751a33ed8db3b0
 N
 src/components/icons/index.tsx,5/8/58dbcd2decc865d43667322af6306a38d4567931
-P
- src/components/ui/Typography.tsx,0/6/06522ded4d539ca830d07279c4496fa1ef7c7bb4
 E
 src/styles/global.css,3/e/3ea85257d8c74ab2f79dac9121fc26edb558777a
-L
-src/components/ui/Button.tsx,d/b/db29c25587b6e5ae87206a4c72df6e43a602bf2c
 X
 (src/components/sections/SectionDream.tsx,2/e/2e8e5e31f55945f604431d4538d798fc8ce931cd
 \
 ,src/components/sections/SectionCtaFlight.tsx,d/f/df025b6371bc568fba794a2ff12150b1c6583d51
 R
 "src/components/sections/Footer.tsx,a/f/af4b01b1e2b3ff492e1413808a436b538a9fe873
-Z
-*src/components/sections/SectionGallery.tsx,6/3/6323936b53f5d5916d254a0afa503e674b826086
 Q
 !src/components/FacilitiesCard.tsx,e/b/eb8ce54bcc43cf17ce2706025f88af9ffccd2dcb
-]
--src/components/sections/SectionFacilities.tsx,3/3/33bb8ab914ba2d2645bda68313fbf4c676d5c2df
 Z
 *src/components/sections/SectionPackage.tsx,e/8/e84c7baffd39a0f81ca14c1f59b6ecdd54d2c2e6

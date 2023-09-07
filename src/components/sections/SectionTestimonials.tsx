@@ -2,7 +2,8 @@ import React from "react";
 import Typography from "components/ui/Typography";
 import { graphql, useStaticQuery } from "gatsby";
 import { Button } from "components/ui/Button";
-import {ArrowLeftIcon, ArrowRightIcon} from "components/icons";
+import { ArrowLeftIcon, ArrowRightIcon } from "components/icons";
+import TestimonialsCard from "components/TestimonialsCard";
 
 const query = graphql`
   query Testimony {
@@ -19,9 +20,7 @@ const query = graphql`
               star
               image {
                 childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(placeholder: BLURRED)
                 }
               }
             }
@@ -63,12 +62,10 @@ const SectionTestimonials = () => {
           "overflow-x-scroll max-w-full py-4 px-2 mt-12 flex relative gap-6 "
         }
       >
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {data?.customers?.map((props) => {
+          //@ts-ignore
+          return <TestimonialsCard {...props} />;
+        })}
       </div>
 
       <div
@@ -76,36 +73,17 @@ const SectionTestimonials = () => {
           "overflow-x-scroll max-w-full py-4 px-2  flex relative gap-6 "
         }
       >
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {data?.customers?.map((props) => {
+          //@ts-ignore
+          return <TestimonialsCard {...props} />;
+        })}
       </div>
-        <Button size={"md"} className={"flex gap-3 float-right mt-8 !px-6 "}>
-            Next
-            <ArrowRightIcon />
-        </Button>
+      <Button size={"md"} className={"flex gap-3 float-right mt-8 !px-6 "}>
+        Next
+        <ArrowRightIcon />
+      </Button>
     </section>
   );
 };
 
-const Card = () => {
-  return (
-    <div
-      className={"custom-shadow rounded-xl py-[20px] px-8 w-[400px] shrink-0"}
-    >
-      <Button variant={"secondary"} size={"sm"} className={"rounded-full !px-4 text-xs !text-left"}>
-        Al Nasr Umrah
-      </Button>
-      <Typography variant={"s24"} className={"mt-4"}>Abd Jamiah</Typography>
-      <Typography variant={"s14"} className={"text-justify"}>
-        I am very satisfied with Al Nasr Travel's service, starting from when we
-        arrived in Saudi until we returned to Indonesia. We provide very good
-        service.
-      </Typography>
-    </div>
-  );
-};
 export default SectionTestimonials;
