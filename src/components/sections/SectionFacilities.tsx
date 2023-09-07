@@ -47,7 +47,7 @@ const SectionFacilities = () => {
         </Typography>
         <div className={"grid grid-cols-1 lg:grid-cols-4 gap-8 mt-20 "}>
           {data?.facilities?.map((props, index) => (
-            <FacilitiesCard {...props} key={index} />
+            props && <FacilitiesCard {...props} key={index} />
           ))}
         </div>
       </div>

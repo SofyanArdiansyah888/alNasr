@@ -35,31 +35,35 @@ const SectionPackage = () => {
   const queryData = useStaticQuery<Queries.PackagesQuery>(query);
   const data = queryData.allMarkdownRemark.nodes[0].frontmatter?.package;
 
-  return (
-    <section className={"container pt-24 "}>
-      <Typography
-        variant={"s54"}
-        as={"h1"}
-        className={"text-center mx-auto max-w-2xl"}
-      >
-        {data?.title}
-      </Typography>
+  // @ts-ignore
+    return (
+      <section className={"container pt-24 "}>
+        <Typography
+          variant={"s54"}
+          as={"h1"}
+          className={"lg:!text-center mx-auto max-w-2xl"}
+        >
+          {data?.title}
+        </Typography>
 
-      <Typography
-        variant={"s24"}
-        as={"p"}
-        className={"mx-auto text-center mt-4 max-w-[40rem]"}
-      >
-        {data?.subtitle}
-      </Typography>
+        <Typography
+          variant={"s24"}
+          as={"p"}
+          className={"mx-auto text-center mt-4 max-w-[40rem]"}
+        >
+          {data?.subtitle}
+        </Typography>
 
-      <div className={"grid grid-cols-1 lg:grid-cols-3 mt-24 gap-16"}>
-        {data?.details?.map(
-          (props, index) => props && <PackageCard {...props} key={index} />,
-        )}
-      </div>
-    </section>
-  );
+        <div className={"grid grid-cols-1 lg:grid-cols-3 mt-24 gap-16"}>
+          {data?.details?.map(
+            (props, index) => {
+              // @ts-ignore
+                return props && <PackageCard {...props} key={index} />;
+            },
+          )}
+        </div>
+      </section>
+    );
 };
 
 export default SectionPackage;

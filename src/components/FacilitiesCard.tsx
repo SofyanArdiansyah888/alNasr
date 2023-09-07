@@ -15,11 +15,7 @@ const FacilitiesCard = ({
   title,
   subtitle,
   icon,
-}: {
-  title?: string | null;
-  subtitle?: string | null;
-  icon?: string | null;
-}) => {
+}: Queries.MarkdownRemarkFrontmatterFacilityFacilities) => {
   return (
     <div className={"custom-shadow items-center lg:items-start rounded-md p-4 flex gap-2 bg-white"}>
       <div className={"w-16"}>

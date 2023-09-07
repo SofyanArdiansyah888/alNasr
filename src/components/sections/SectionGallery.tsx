@@ -40,7 +40,7 @@ const SectionGallery = () => {
         <Typography
           variant={"s54"}
           as={"h1"}
-          className={"mx-auto text-center mb-4"}
+          className={"mx-auto lg:!text-center mb-4"}
         >
           {data?.title}
         </Typography>
