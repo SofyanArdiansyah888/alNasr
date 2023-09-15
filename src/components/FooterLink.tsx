@@ -1,5 +1,5 @@
 import React from "react";
-
+//
 const FooterLink = (props: Queries.MarkdownRemarkFrontmatterFooterLinks) => (
     <div className={"text-white"}>
         <p className={"text-xl font-semibold"}>{props?.title}</p>
